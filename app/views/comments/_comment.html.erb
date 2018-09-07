@@ -34,7 +34,7 @@
             <a href="<%= comment.path %>"><%= comment.readable_publish_date %></a>
           </div>
           <button class="dropbtn">
-            <%= image_tag("chevron-down.svg", class: "dropdown-icon") %>
+            <%= image_tag("three-dots.svg", class: "dropdown-icon") %>
           </button>
           <div class="dropdown">
             <div class="dropdown-content">
@@ -47,6 +47,11 @@
               <a href="/report-abuse?url=https://dev.to<%= comment.path %>">Report Abuse</a>
             </div>
           </div>
+        </div>
+        <div class="collapse">
+        <button class="dropbtn collapsible-trigger">
+        <%= image_tag("chevron-down.svg", class: "dropdown-icon") %>
+      </button>
         </div>
         <div class="body">
           <%= comment.processed_html.html_safe %>
